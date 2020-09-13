@@ -19,7 +19,7 @@ video.addEventListener('play', () => {
 document.body.append(canvas);
 const displaySize={width:video.width,height:video.height}
 faceapi.matchDimensions(canvas, displaySize);
-setInterval(async () => { 
+setInterval(async () => {
 const detections=await faceapi.detectAllFaces(video,new faceapi.TinyFaceDetectorOptions())
 .withFaceLandmarks()
 .withFaceDescriptors()
@@ -30,10 +30,10 @@ console.log("resizeddetections"+resizedDetections.toString())
 canvas.getContext('2d').clearRect(0,0,canvas.width,canvas.height);
 if(!resizedDetections.length){
   console.log("mask")
-  document.getElementById("GFG").innerHTML="WITH MASK";
+  document.getElementById("GFG").innerHTML="Con Mascarilla";
   return;
 }
-document.getElementById("GFG").innerHTML="";
+document.getElementById("GFG").innerHTML="Sin Mascarilla";
 faceapi.draw.drawDetections(canvas,resizedDetections);
 faceapi.draw.drawFaceLandmarks(canvas,resizedDetections);
 resizedDetections.forEach(result => {
