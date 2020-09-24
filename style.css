@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 .titulo{
+    font-size: 34px;
+}
+#GFG {
+    font-size: 35px;
+}
+video {
+    padding: 20px;
+}
